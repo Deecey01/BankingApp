@@ -1,36 +1,113 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+---
 
-## Getting Started
+# BankEase
 
-First, run the development server:
+Welcome to BankEase, a unified multi-banking platform where users can manage multiple bank accounts seamlessly. BankEase offers a comprehensive view of transaction histories, supports secure payment transfers, and categorizes expenses for easy tracking.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Table of Contents
+- [Features](#features)
+- [Technologies Used](#technologies-used)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Contributing](#contributing)
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Features
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### General
+- **Unified Dashboard**: View and manage multiple bank accounts from a single platform.
+- **Transaction History**: Access detailed transaction history for each bank account.
+- **Expense Categorization**: View expenses categorized by type, such as food/drinks, traveling, etc.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+### Payment Transfers
+- **Inter-Bank Transfers**: Securely transfer payments between bank accounts using Dwolla.
 
-## Learn More
+### Monitoring and Security
+- **Error Monitoring**: Sentry integration for monitoring and instantly identifying the cause of any errors.
+- **Secure Authentication**: Ultra-secure SSR authentication to ensure data protection.
 
-To learn more about Next.js, take a look at the following resources:
+## Technologies Used
+- **Frontend**: Next.js 14
+- **Styling**: Tailwind CSS
+- **Database**: Appwrite
+- **Multi-Account Functionality**: Plaid
+- **Payment Transfers**: Dwolla
+- **Monitoring**: Sentry
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Installation
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+1. **Clone the repository**
+   ```bash
+   https://github.com/Deecey01/BankingApp.git
+   cd BankingApp
+   ```
 
-## Deploy on Vercel
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+3. **Set up environment variables**
+   Create a `.env` file in the root directory and add your Appwrite, Plaid, Dwolla, and Sentry configurations.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+   ```env
+   #NEXT
+    NEXT_PUBLIC_SITE_URL=
+    
+    #APPWRITE
+    NEXT_PUBLIC_APPWRITE_ENDPOINT=https://cloud.appwrite.io/v1
+    NEXT_PUBLIC_APPWRITE_PROJECT=
+    APPWRITE_DATABASE_ID=
+    APPWRITE_USER_COLLECTION_ID=
+    APPWRITE_BANK_COLLECTION_ID=
+    APPWRITE_TRANSACTION_COLLECTION_ID=
+    NEXT_APPWRITE_KEY=
+    
+    #PLAID
+    PLAID_CLIENT_ID=
+    PLAID_SECRET=
+    PLAID_ENV=
+    PLAID_PRODUCTS=
+    PLAID_COUNTRY_CODES=
+    
+    #DWOLLA
+    DWOLLA_KEY=
+    DWOLLA_SECRET=
+    DWOLLA_BASE_URL=https://api-sandbox.dwolla.com
+    DWOLLA_ENV=sandbox
+   ```
+
+4. **Run the application**
+   ```bash
+   npm run dev
+   ```
+
+## Usage
+
+1. **Register and Login**
+   - Create an account using the secure SSR authentication process.
+   - Log in to access the unified dashboard.
+
+2. **Manage Bank Accounts**
+   - Add multiple bank accounts via Plaid.
+   - View transaction histories for each account.
+
+3. **Transfer Payments**
+   - Securely transfer payments between your bank accounts using Dwolla.
+
+4. **Monitor Expenses**
+   - View categorized expenses on the home page for easy tracking of spending habits.
+
+## Contributing
+
+We welcome contributions to enhance BankEase. To contribute:
+
+1. Fork the repository.
+2. Create a new branch.
+3. Make your changes.
+4. Submit a pull request.
+
+Please ensure your code follows our coding guidelines and includes tests where applicable.
+
+---
+
+Feel free to adjust any part of this README to better fit your project’s specifics or add any additional details you find necessary.
