@@ -2,7 +2,7 @@
 
 # BankEase
 
-Welcome to BankEase, a unified multi-banking platform where users can manage multiple bank accounts seamlessly. BankEase offers a comprehensive view of transaction histories, supports secure payment transfers, and categorizes expenses for easy tracking.
+Welcome to BankEase, a unified multi-banking platform where users can manage multiple bank accounts seamlessly. BankEase offers a comprehensive view of transaction histories, supports secure payment transfers, and categorizes expenses for easy tracking. Website: [https://banking-app-six-tau.vercel.app/](https://banking-app-six-tau.vercel.app/)
 
 ## Table of Contents
 - [Features](#features)
